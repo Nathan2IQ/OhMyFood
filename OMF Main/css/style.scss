@@ -23,21 +23,21 @@ a {
 }
 
 h1{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 50px;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
 p {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 300;
 }
 
@@ -47,6 +47,7 @@ header {
     justify-content: center;
 
     .logo {
+        width: 40%;
         margin: 20px 0;
         object-fit: cover;
     }
@@ -62,15 +63,16 @@ header {
     width: 100%;
     
     .location__icon {
-        font-size: 2em;
+        font-size: 1em;
+        text-align: center;
     }
     .location__recherche {
         border: none;
         color: black;
         background-color: inherit;
         text-align: center;
-        font-size: 2em;
-        width: 219px;
+        font-size: 1.4em;
+        width: 156px;
         margin: 25px 0 25px 15px;
         font-weight: 500;
     }
@@ -114,7 +116,7 @@ header {
             border: transparent;
             border-radius: 40px;
             padding: 20px 25px;
-            font-size: 2em;
+            font-size: 1.5em;
             box-shadow: 5px 8px 8px 2px lightgray;
             transition: opacity 500ms ease-in-out;
         }
@@ -158,12 +160,12 @@ header {
                 color: white;
                 width: 32px;
                 height: 32px;
-                font-size: 1.5em;
+                font-size: 1em;
                 position: relative;
                 left: -15px;
             }
             .fonctionnement__list--icon {
-                font-size: 2em;
+                font-size: 1.5em;
                 padding: 0 30px;
                 color: #7E7E7E;
             }
@@ -253,7 +255,7 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 3em;
+                font-size: 2em;
                 margin-right: 15px;
                 cursor: pointer;
             }
@@ -303,7 +305,7 @@ header {
     }
     .footer__ul {
         list-style: none;
-        font-size: 2em;
+        font-size: 1.3em;
         font-weight: 400;
         padding: 18px 0 22px 40px;
 
@@ -333,8 +335,8 @@ header {
         font-size: 1.5em;
     }
 
-    .logo {
-        width: 30%;
+    header .logo {
+        width: 25%;
     }
 
     .fonctionnement {
@@ -350,6 +352,7 @@ header {
 
             .fonctionnement__list {
                 width: 30%;
+                margin: 0 20px;
             }
         }
     }
