@@ -1,0 +1,365 @@
+// GENERAL
+
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 3em;
+    margin: 50px;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+p {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+// HEADER
+header {
+    display: flex;
+    justify-content: center;
+
+    .logo {
+        margin: 20px 0;
+        object-fit: cover;
+    }
+}
+
+// LIEU DE RECHERCHE
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    width: 100%;
+    
+    .location__icon {
+        font-size: 2em;
+    }
+    .location__recherche {
+        border: none;
+        color: black;
+        background-color: inherit;
+        text-align: center;
+        font-size: 2em;
+        width: 219px;
+        margin: 25px 0 25px 15px;
+        font-weight: 500;
+    }
+}
+
+// RESERVATION
+
+.reservation {
+    background-color: #f6f6f6;
+    width: 100%;
+
+    .reservation__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 39px;
+        padding-bottom: 27px;
+        width: 100%;
+        gap: 20px;
+
+        h1 {
+            width: 50%;
+        }
+
+        p {
+            text-align: center;
+            width: 70%;
+        }
+    }
+    .reservation__input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 57px;
+
+        .reservation__input--btn {
+            background: linear-gradient(355deg, #9356DC, #FF79DA);
+            color: white;
+            border: transparent;
+            border-radius: 40px;
+            padding: 20px 25px;
+            font-size: 2em;
+            box-shadow: 5px 8px 8px 2px lightgray;
+            transition: opacity 500ms ease-in-out;
+        }
+    }
+}
+
+.reservation__input--btn:hover {
+    opacity: 75%;
+    cursor: pointer;
+}
+
+// FONCTIONNEMENT
+
+.fonctionnement {
+    width: 100%;
+    padding-bottom: 40px;
+
+    .fonctionnement__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .fonctionnement__list {
+            display: flex;
+            align-items: center;
+            background-color: #f6f6f6;
+            border-radius: 20px;
+            width: 80%;
+            padding: 30px 0;
+            box-shadow: 8px 8px 8px 3px lightgray;
+
+            .fonctionnement__list--nmber {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: transparent;
+                background-color: #9356DC;
+                border-radius: 50%;
+                color: white;
+                width: 32px;
+                height: 32px;
+                font-size: 1.5em;
+                position: relative;
+                left: -15px;
+            }
+            .fonctionnement__list--icon {
+                font-size: 2em;
+                padding: 0 30px;
+                color: #7E7E7E;
+            }
+            .fa-store {
+                color: #9356DC;
+            }
+        }
+    }
+}
+
+// RESTAURANTS
+
+.restaurant {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 40px 0;
+    margin: 40px 0;
+
+    .restaurant__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .card {
+        border: transparent;
+        border-radius: 20px;
+        width: 90%;
+        background-color: white;
+
+        .card__nouveau--palette {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #99E2D0;
+            color: #008766;
+            font-weight: 500;
+            width: 20%;
+            height: 60px;
+            border: transparent;
+            border-radius: 5px;
+            position: absolute;
+            right: 80px;
+            top: 1410px;
+        }
+
+        .card__nouveau--note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #99E2D0;
+            color: #008766;
+            font-weight: 500;
+            width: 20%;
+            height: 60px;
+            border: transparent;
+            border-radius: 5px;
+            position: absolute;
+            right: 80px;
+            top: 1820px;
+        }
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            width: 100%;
+            height: 250px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .card__content {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            .card__content--txt {
+                padding: 10px;
+            }
+
+            .heart-checkbox {
+                display: none;
+            }
+
+            .card__content--heart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3em;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.heart-checkbox {
+    display: none;
+}
+
+.heart-icon {
+    cursor: pointer;
+
+    .full-heart {
+        background: linear-gradient(to bottom, #9356DC, #FF79DA);
+        background-clip: text;
+        color: transparent;
+        display: none;
+    }
+
+    .empty-heart {
+        display: inline;
+    }
+}
+
+.heart-checkbox:checked + .heart-icon {
+    
+    .empty-heart {
+        display: none;
+    }
+
+    .full-heart {
+        display: inline;
+    }
+}
+
+// FOOTER
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    color: white;
+
+    .footer__logo {
+        padding: 30px 0 0 40px;
+    }
+    .footer__ul {
+        list-style: none;
+        font-size: 2em;
+        font-weight: 400;
+        padding: 18px 0 22px 40px;
+
+        li {
+            padding: 5px;
+        }        
+
+        .footer__ul--link {
+            font-weight: 500;
+        }
+    }
+}
+
+// VERSION RESPONSIVE POUR LE DESKTOP
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .fonctionnement {
+        width: 100%;
+
+        h2 {
+            margin-left: 0;
+        }
+
+        .fonctionnement__container {
+            flex-direction: row;
+            gap: 40px;
+
+            .fonctionnement__list {
+                width: 30%;
+            }
+        }
+    }
+
+    .restaurant {
+        width: 100%;
+        
+        .restaurant__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
