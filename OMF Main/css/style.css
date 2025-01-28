@@ -10,9 +10,11 @@ body {
 }
 
 .main-container {
+  flex: 1;
   width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
+  background-color: #f6f6f6;
 }
 
 a {
@@ -42,6 +44,10 @@ p {
 header {
   display: flex;
   justify-content: center;
+  background-color: white;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 2px 4px 1px grey;
 }
 header .logo {
   width: 40%;
@@ -57,15 +63,20 @@ header .logo {
   background-color: #eaeaea;
   width: 100%;
 }
-.location .location__icon {
-  font-size: 1em;
-  text-align: center;
+.location form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px 1px gray;
+  width: 100%;
 }
-.location .location__recherche {
+.location form .location__icon {
+  font-size: 1em;
+}
+.location form .location__recherche {
   border: none;
   color: black;
   background-color: inherit;
-  text-align: center;
   font-size: 1.4em;
   width: 156px;
   margin: 25px 0 25px 15px;
@@ -75,6 +86,7 @@ header .logo {
 .reservation {
   background-color: #f6f6f6;
   width: 100%;
+  z-index: 1;
 }
 .reservation .reservation__title {
   display: flex;
@@ -119,6 +131,12 @@ header .logo {
 .fonctionnement {
   width: 100%;
   padding-bottom: 40px;
+  background-color: white;
+}
+.fonctionnement h2 {
+  margin: 0;
+  padding: 50px 20px;
+  background-color: white;
 }
 .fonctionnement .fonctionnement__container {
   display: flex;
@@ -163,7 +181,6 @@ header .logo {
   width: 100%;
   background-color: #f6f6f6;
   padding: 40px 0;
-  margin: 40px 0;
 }
 .restaurant .restaurant__card {
   display: flex;
@@ -283,6 +300,96 @@ header .logo {
   font-weight: 500;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 2.5em;
+}
+
+.restaurant__pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 45vh;
+  z-index: 1;
+  position: relative;
+}
+
+.menu {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  z-index: 2;
+  position: relative;
+  bottom: 30px;
+  min-height: 80vh;
+}
+.menu .menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+}
+.menu .menu__title h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.menu .menu__title .heart-icon {
+  font-size: 2em;
+  padding-right: 20px;
+}
+.menu .menu__subtitle {
+  margin: 10px 20px;
+}
+.menu .menu__subtitle hr {
+  border: none;
+  background-color: #99E2D0;
+  width: 10%;
+  height: 3px;
+  margin-top: 5px;
+}
+.menu .menu__list {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+  gap: 20px;
+}
+.menu .menu__list .menu__list--items {
+  border: transparent;
+  background-color: white;
+  border-radius: 25px;
+  padding: 15px;
+}
+.menu .menu__list .menu__list--items .menu__list--detail {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menu__list .menu__list--items .menu__list--detail p {
+  font-size: 1.3em;
+}
+.menu .command__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .command__input .command__input--btn {
+  background: linear-gradient(355deg, #9356DC, #FF79DA);
+  color: white;
+  border: transparent;
+  border-radius: 40px;
+  width: 50%;
+  height: 8vh;
+  margin: 30px 0;
+  font-size: 1.5em;
+  box-shadow: 5px 8px 8px 2px lightgray;
+  transition: opacity 500ms ease-in-out;
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 2em;
@@ -293,8 +400,14 @@ header .logo {
   h3 {
     font-size: 1.5em;
   }
+  header {
+    box-shadow: 0 0 0 white;
+  }
   header .logo {
     width: 25%;
+  }
+  .location form {
+    box-shadow: none;
   }
   .fonctionnement {
     width: 100%;
@@ -317,24 +430,24 @@ header .logo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-}
-.footer {
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 30px;
-}
-.footer .footer__logo {
-  padding: 20px 60px;
-}
-.footer .footer__ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.footer .footer__ul li {
-  font-weight: 400;
-}
-.footer .footer__ul .footer__ul--link {
-  font-weight: 500;
-  text-align: center;
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 30px;
+  }
+  .footer .footer__logo {
+    padding: 20px 60px;
+  }
+  .footer .footer__ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer .footer__ul li {
+    font-weight: 400;
+  }
+  .footer .footer__ul .footer__ul--link {
+    font-weight: 500;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -12,9 +12,11 @@ body {
 }
 
 .main-container {
+    flex: 1;
     width: 100%;
     max-width: 1440px;
     box-sizing: border-box;
+    background-color: #f6f6f6;
 }
 
 a {
@@ -45,6 +47,10 @@ p {
 header {
     display: flex;
     justify-content: center;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 2px 4px 1px grey;
 
     .logo {
         width: 40%;
@@ -62,19 +68,25 @@ header {
     background-color: #eaeaea;
     width: 100%;
     
-    .location__icon {
-        font-size: 1em;
-        text-align: center;
-    }
-    .location__recherche {
-        border: none;
-        color: black;
-        background-color: inherit;
-        text-align: center;
-        font-size: 1.4em;
-        width: 156px;
-        margin: 25px 0 25px 15px;
-        font-weight: 500;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px 1px gray;
+        width: 100%;
+
+        .location__icon {
+            font-size: 1em;
+        }
+        .location__recherche {
+            border: none;
+            color: black;
+            background-color: inherit;
+            font-size: 1.4em;
+            width: 156px;
+            margin: 25px 0 25px 15px;
+            font-weight: 500;
+        }
     }
 }
 
@@ -83,6 +95,7 @@ header {
 .reservation {
     background-color: #f6f6f6;
     width: 100%;
+    z-index: 1;
 
     .reservation__title {
         display: flex;
@@ -133,6 +146,13 @@ header {
 .fonctionnement {
     width: 100%;
     padding-bottom: 40px;
+    background-color: white;
+
+    h2 {
+        margin: 0;
+        padding: 50px 20px;
+        background-color: white;
+    }
 
     .fonctionnement__container {
         display: flex;
@@ -182,7 +202,6 @@ header {
     width: 100%;
     background-color: #f6f6f6;
     padding: 40px 0;
-    margin: 40px 0;
 
     .restaurant__card {
         display: flex;
@@ -320,7 +339,125 @@ header {
     }
 }
 
+// -----------------------------------------------------------------
+
+// LE CODE CI-DESSOUS CORRESPOND AU STYLE DES PAGES DE RESTAURANT
+
+// -----------------------------------------------------------------
+
+// HEADER
+
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    font-size: 2.5em;
+}
+
+// PHOTO DU RESTAURANT
+
+.restaurant__pic {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 45vh;
+        z-index: 1;
+        position: relative;
+    }
+}
+
+// MENU
+
+.menu {
+    width: 100%;
+    background-color: #f6f6f6;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 2;
+    position: relative;
+    bottom: 30px;
+    min-height: 80vh;
+
+    .menu__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 25px;
+
+        h1 {
+            font-family: "Shrikhand", sans-serif;
+            font-size: 2.5em;
+            font-weight: 400;
+        }
+
+        .heart-icon {
+            font-size: 2em;
+            padding-right: 20px;
+        }
+    }
+
+    .menu__subtitle {
+        margin: 10px 20px;
+
+        hr {
+            border: none;
+            background-color: #99E2D0;
+            width: 10%;
+            height: 3px;
+            margin-top: 5px;
+        }
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 20px;
+        gap: 20px;
+
+        .menu__list--items {
+            border: transparent;
+            background-color: white;
+            border-radius: 25px;
+            padding: 15px;
+
+            .menu__list--detail {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+
+    .command__input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .command__input--btn {
+            background: linear-gradient(355deg, #9356DC, #FF79DA);
+            color: white;
+            border: transparent;
+            border-radius: 40px;
+            width: 50%;
+            height: 8vh;
+            margin: 30px 0;
+            font-size: 1.5em;
+            box-shadow: 5px 8px 8px 2px lightgray;
+            transition: opacity 500ms ease-in-out;
+        }
+    }
+}
+
+// -----------------------------------------------------------------
+
 // VERSION RESPONSIVE POUR LE DESKTOP
+
+// -----------------------------------------------------------------
 
 @media (min-width: 768px) {
 
@@ -340,8 +477,18 @@ header {
 
     // RESPONSIVE DE LA SECTION HEADER
 
-    header .logo {
-        width: 25%;
+    header {
+        box-shadow: 0 0 0 white;
+
+        .logo {
+            width: 25%;
+        }
+    }
+
+    // RESPONSIVE DE LA SECTION LOCATION
+
+    .location form {
+        box-shadow: none;
     }
 
     // RESPONSIVE DE LA SECTION FONCTIONNEMENT
@@ -374,7 +521,7 @@ header {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-}
+
 
     // RESPONSIVE DE LA SECTION FOOTER
 
@@ -402,3 +549,4 @@ header {
             }
         }
     }
+}
