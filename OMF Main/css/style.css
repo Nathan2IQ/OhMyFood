@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -317,7 +316,7 @@ header .logo {
 
 @keyframes showLoader {
   100% {
-    visibility: hidden; /* Le loader disparaît après 2 secondes */
+    visibility: hidden;
   }
 }
 .animation {
@@ -410,6 +409,8 @@ nav {
 }
 .menu .menu__list .menu__list--items .menu__list--txt {
   padding: 15px;
+  flex-grow: 1;
+  overflow: hidden;
 }
 .menu .menu__list .menu__list--items .menu__list--txt p {
   font-size: 1.3em;
@@ -454,14 +455,24 @@ nav {
   font-size: 2em;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
-  height: 78%;
+  height: 100%;
   width: 0;
   transition: all 250ms ease-in-out;
 }
 
 .dish:checked + .menu__list--items .check {
-  width: 55px;
-  padding: 10px;
+  width: 70px;
+}
+.dish:checked + .menu__list--items h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish:checked + .menu__list--items p {
+  font-size: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) {

@@ -2,178 +2,203 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>OhMyFood</title>
+        <title>Menu - À la française</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/24555f729d.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
         <div class="main-container">
 
-            <!-- HEADER -->
-            <header>
-                    <img class="logo" src="images/logo/ohmyfood.png" alt="Logo OhMyFood">
-            </header>
+        <!-- HEADER -->
+
+        <header>
+            <nav>
+                <a href="/index.html">
+                <i class="return-button fa-solid fa-arrow-left"></i>
+                </a>
+            </nav>
+            <img class="logo" src="/images/logo/ohmyfood.png" alt="Logo de OhMyFood">
+        </header>
 
             <main>
-                
+
                 <!-- LOADER -->
 
                 <div class="loader">
                     <div class="animation"></div>
                 </div>
 
-                <!-- LOCATION -->
+                <!-- PHOTO DU RESTAURANT -->
 
-                <div class="location">
-                    <form>
-                        <i class="location__icon fa-solid fa-location-dot"></i>
-                        <input id="location__recherche" class="location__recherche" type="text" value="Paris, Belleville">
-                    </form>
+                <div class="restaurant__pic">
+                    <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant À la française">
                 </div>
 
-                <!-- RESERVATION -->
+                <!-- MENU DU RESTAURANT -->
 
-                <section class="reservation">
-                    <div class="reservation__title">
-                        <h1>Réservez le menu qui vous convient</h1>
-                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <section class="menu">
+                    <div class="menu__title">
+                        <h1>À la française</h1>
+                        <input type="checkbox" id="heart-checkbox-palette" class="heart-checkbox" name="heart">
+                        <label for="heart-checkbox-palette" class="heart-icon">
+                            <i class="empty-heart fa-regular fa-heart"></i>
+                            <i class="full-heart fa-solid fa-heart"></i>
+                        </label>
                     </div>
-                    <div class="reservation__input">
-                        <button class="reservation__input--btn" type="button">Explorer nos restaurants</button>
+
+                    <!-- ENTREES -->
+
+                    <div class="menu__subtitle">
+                        <p>ENTRÉES</p>
+                        <hr>
+                    </div>
+
+                    <div class="menu__list">
+
+                        <input class="dish" type="checkbox" id="entree__1">
+                        <label for="entree__1" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Tartare de poulpe acidulé</h3>
+                                <p>Aux zestes d'orange</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>25€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="entree__2">
+                        <label for="entree__2" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Velouté de légumes d'antan</h3>
+                                <p>Carotte, panais, topinambour</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>35€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="entree__3">
+                        <label for="entree__3" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Soupe à l'oignon</h3>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>20€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                    </div>
+
+                    <!-- PLATS -->
+
+                    <div class="menu__subtitle">
+                        <p>PLATS</p>
+                        <hr>
+                    </div>
+
+                    <div class="menu__list">
+
+                        <input class="dish" type="checkbox" id="plat__1">
+                        <label for="plat__1" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Coquilles Saint-Jacques</h3>
+                                <p>Accompagnées d'une purée de panais</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>40€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="plat__2">
+                        <label for="plat__2" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Magret de canard</h3>
+                                <p>Et parmentier de pommes de terre</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>35€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="plat__3">
+                        <label for="plat__3" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                                <p>Sur son lit de gnocchis aux légumes</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>44€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                    </div>
+
+                    <!-- DESSERTS -->
+
+                    <div class="menu__subtitle">
+                        <p>DESSERTS</p>
+                        <hr>
+                    </div>
+
+                    <div class="menu__list">
+
+                        <input class="dish" type="checkbox" id="dessert__1">
+                        <label for="dessert__1" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Pétales de violettes glacés</h3>
+                                <p>Et purée de noisettes</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>18€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="dessert__2">
+                        <label for="dessert__2" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Fondant au chocolat</h3>
+                                <p>Revisité</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>22€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                        <input class="dish" type="checkbox" id="dessert__3">
+                        <label for="dessert__3" class="menu__list--items">
+                            <div class="menu__list--txt">
+                                <h3>Millefeuille croustillant</h3>
+                                <p>Myrtilles et pâte d’amande</p>
+                            </div>
+                            <div class="menu__list--price">
+                                <h3>23€</h3>
+                                <i class="check fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+
+                    </div>
+
+                    <div class="book__input">
+                        <button class="book__input--btn" type="button">Commander</button>
                     </div>
                 </section>
-
-                <!-- FONCTIONNEMENT -->
-
-                <section class="fonctionnement">
-                    <h2>Fonctionnement</h2>
-                    <div class="fonctionnement__container">
-                        <article class="fonctionnement__list">
-                            <p class="fonctionnement__list--nmber">1</p>
-                            <i class="fonctionnement__list--icon fa-solid fa-mobile-screen-button"></i>
-                            <h3>Choisissez un restaurant</h3>
-                        </article>
-                        <article class="fonctionnement__list">
-                            <p class="fonctionnement__list--nmber">2</p>
-                            <i class="fonctionnement__list--icon fa-solid fa-list"></i>
-                            <h3>Composez votre menu</h3>
-                        </article>
-                        <article class="fonctionnement__list">
-                            <p class="fonctionnement__list--nmber">3</p>
-                            <i class="fonctionnement__list--icon fa-solid fa-store"></i>
-                            <h3>Dégustez au restaurant</h3>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- RESTAURANTS -->
-
-                <section class="restaurant">
-                    <h2>Restaurants</h2>
-                    <div class="restaurant__container">
-                        <div class="restaurant__card">
-                            <article class="card">
-                                <a href="restaurants/menu_la_palette.html">
-                                <p class="card__nouveau--palette">Nouveau</p>
-                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
-                                     alt="Photo du restaurant La palette du goût">
-                                </a>
-                                <div class="card__content">
-                                    <a href="restaurants/menu_la_palette.html">
-                                        <div class="card__content--txt">
-                                            <h3>La palette du goût</h3>
-                                            <p>Ménilmontant</p>
-                                        </div>
-                                    </a>
-                                    <div class="card__content--heart">
-                                        <input type="checkbox" id="heart-checkbox-palette" class="heart-checkbox" name="heart">
-                                        <label for="heart-checkbox-palette" class="heart-icon">
-                                            <i class="empty-heart fa-regular fa-heart"></i>
-                                            <i class="full-heart fa-solid fa-heart"></i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="restaurant__card">
-                            <article class="card">
-                                <a href="restaurants/menu_la_note.html">
-                                <p class="card__nouveau--note">Nouveau</p>
-                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" 
-                                     alt="Photo du restaurant La note enchantée">
-                                </a>
-                                <div class="card__content">
-                                    <a href="restaurants/menu_la_note.html">
-                                        <div class="card__content--txt">
-                                            <h3>La note enchantée</h3>
-                                            <p>Charonne</p>
-                                        </div>
-                                    </a>
-                                    <div class="card__content--heart">
-                                        <input type="checkbox" id="heart-checkbox-note" class="heart-checkbox" name="heart">
-                                        <label for="heart-checkbox-note" class="heart-icon">
-                                            <i class="empty-heart fa-regular fa-heart"></i>
-                                            <i class="full-heart fa-solid fa-heart"></i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="restaurant__card">
-                            <article class="card">
-                                <a href="restaurants/menu_a_la_francaise.html">
-                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" 
-                                     alt="Photo du restaurant À la française">
-                                </a>
-                                <div class="card__content">
-                                    <a href="restaurants/menu_a_la_francaise.html">
-                                        <div class="card__content--txt">
-                                            <h3>À la française</h3>
-                                            <p>Cité Rouge</p>
-                                        </div>
-                                    </a>
-                                    <div class="card__content--heart">
-                                        <input type="checkbox" id="heart-checkbox-francaise" class="heart-checkbox" name="heart">
-                                        <label for="heart-checkbox-francaise" class="heart-icon">
-                                            <i class="empty-heart fa-regular fa-heart"></i>
-                                            <i class="full-heart fa-solid fa-heart"></i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="restaurant__card">
-                            <article class="card">
-                                <a href="restaurants/menu_le_délice.html">
-                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" 
-                                     alt="Photo du restaurant Le délice des sens">
-                                </a>
-                                <div class="card__content">
-                                    <a href="restaurants/menu_le_délice.html">
-                                        <div class="card__content--txt">
-                                            <h3>Le délice des sens</h3>
-                                            <p>Folie-Méricourt</p>
-                                        </div>
-                                    </a>
-                                    <div class="card__content--heart">
-                                        <input type="checkbox" id="heart-checkbox-delice" class="heart-checkbox" name="heart">
-                                        <label for="heart-checkbox-delice" class="heart-icon">
-                                            <i class="empty-heart fa-regular fa-heart"></i>
-                                            <i class="full-heart fa-solid fa-heart"></i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- FOOTER -->
 
                 <footer>
                     <div class="footer">
@@ -199,6 +224,7 @@
                         </ul>
                     </div>
                 </footer>
+
             </main>
         </div>
     </body>

@@ -357,7 +357,7 @@ header {
 
 @keyframes showLoader {
     100% {
-      visibility: hidden;  /* Le loader disparaît après 2 secondes */
+      visibility: hidden;
     }
   }
 
@@ -468,6 +468,8 @@ nav {
 
             .menu__list--txt {
                 padding: 15px;
+                flex-grow: 1;
+                overflow: hidden;
 
                 p {
                     font-size: 1.3em;
@@ -522,7 +524,7 @@ nav {
     font-size: 2em;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
-    height: 78%;
+    height: 100%;
     width: 0;
     transition: all 250ms ease-in-out;
 }
@@ -530,8 +532,20 @@ nav {
 .dish:checked + .menu__list--items {
 
     .check {
-        width: 55px;
-        padding: 10px;
+        width: 70px;
+    }
+
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p {
+        font-size: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
