@@ -339,6 +339,43 @@ header {
     }
 }
 
+// LE CODE CI-DESSOUS CORRESPOND AU STYLE ET A L'ANIMATION DU LOADER
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: showLoader 1s forwards;
+}
+
+@keyframes showLoader {
+    100% {
+      visibility: hidden;  /* Le loader disparaît après 2 secondes */
+    }
+  }
+
+
+  .animation {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 // -----------------------------------------------------------------
 
 // LE CODE CI-DESSOUS CORRESPOND AU STYLE DES PAGES DE RESTAURANT
@@ -469,6 +506,11 @@ nav {
     }
 }
 
+.book__input--btn:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
 // LA PARTIE CI-DESSOUS S'OCCUPE DE L'ANIMATION DE RESERVATION
 
 .check {
@@ -492,15 +534,6 @@ nav {
         padding: 10px;
     }
 }
-
-
-
-
-
-
-
-
-
 
 // -----------------------------------------------------------------
 
