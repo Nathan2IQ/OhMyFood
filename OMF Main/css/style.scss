@@ -416,36 +416,50 @@ nav {
         margin: 20px 20px;
         gap: 20px;
 
+        .dish {
+            display: none;
+        }
+
         .menu__list--items {
             display: flex;
             justify-content: space-between;
             border: transparent;
             background-color: white;
             border-radius: 25px;
-            padding: 15px;
+            cursor: pointer;
+            overflow: hidden;
 
-            p {
-                font-size: 1.3em;
+            .menu__list--txt {
+                padding: 15px;
+
+                p {
+                    font-size: 1.3em;
+                }
             }
 
             .menu__list--price {
                 display: flex;
                 align-items: end;
+                gap: 15px;
+
+                h3 {
+                    padding: 10px;
+                }
             }
         }
     }
 
-    .command__input {
+    .book__input {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .command__input--btn {
+        .book__input--btn {
             background: linear-gradient(355deg, #9356DC, #FF79DA);
             color: white;
             border: transparent;
             border-radius: 40px;
-            width: 50%;
+            width: 45%;
             height: 8vh;
             margin: 30px 0;
             font-size: 1.5em;
@@ -454,6 +468,39 @@ nav {
         }
     }
 }
+
+// LA PARTIE CI-DESSOUS S'OCCUPE DE L'ANIMATION DE RESERVATION
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #99E2D0;
+    font-size: 2em;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 78%;
+    width: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.dish:checked + .menu__list--items {
+
+    .check {
+        width: 55px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 // -----------------------------------------------------------------
 

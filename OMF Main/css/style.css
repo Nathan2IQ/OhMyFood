@@ -359,37 +359,67 @@ nav {
   margin: 20px 20px;
   gap: 20px;
 }
+.menu .menu__list .dish {
+  display: none;
+}
 .menu .menu__list .menu__list--items {
   display: flex;
   justify-content: space-between;
   border: transparent;
   background-color: white;
   border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu .menu__list .menu__list--items .menu__list--txt {
   padding: 15px;
 }
-.menu .menu__list .menu__list--items p {
+.menu .menu__list .menu__list--items .menu__list--txt p {
   font-size: 1.3em;
 }
 .menu .menu__list .menu__list--items .menu__list--price {
   display: flex;
   align-items: end;
+  gap: 15px;
 }
-.menu .command__input {
+.menu .menu__list .menu__list--items .menu__list--price h3 {
+  padding: 10px;
+}
+.menu .book__input {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu .command__input .command__input--btn {
+.menu .book__input .book__input--btn {
   background: linear-gradient(355deg, #9356DC, #FF79DA);
   color: white;
   border: transparent;
   border-radius: 40px;
-  width: 50%;
+  width: 45%;
   height: 8vh;
   margin: 30px 0;
   font-size: 1.5em;
   box-shadow: 5px 8px 8px 2px lightgray;
   transition: opacity 500ms ease-in-out;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 2em;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 78%;
+  width: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.dish:checked + .menu__list--items .check {
+  width: 55px;
+  padding: 10px;
 }
 
 @media (min-width: 768px) {
