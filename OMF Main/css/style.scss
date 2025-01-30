@@ -417,18 +417,20 @@ nav {
         gap: 20px;
 
         .menu__list--items {
+            display: flex;
+            justify-content: space-between;
             border: transparent;
             background-color: white;
             border-radius: 25px;
             padding: 15px;
 
-            .menu__list--detail {
-                display: flex;
-                justify-content: space-between;
+            p {
+                font-size: 1.3em;
+            }
 
-                p {
-                    font-size: 1.3em;
-                }
+            .menu__list--price {
+                display: flex;
+                align-items: end;
             }
         }
     }
