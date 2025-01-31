@@ -542,6 +542,7 @@ nav {
   }
   .footer .footer__logo {
     padding: 20px 60px;
+    fill: white;
   }
   .footer .footer__ul {
     display: flex;
