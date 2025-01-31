@@ -513,7 +513,7 @@ nav {
     opacity: 75%;
 }
 
-// LA PARTIE CI-DESSOUS S'OCCUPE DE L'ANIMATION DE RESERVATION
+// LA PARTIE CI-DESSOUS S'OCCUPE DE L'ANIMATION DE SELECTION
 
 .check {
     display: flex;
@@ -546,6 +546,29 @@ nav {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+}
+
+// LA SECTION CI-DESSOUS CORRESPOND AUX ANIMATIONS D'APPARITIONS
+
+.menu__subtitle, .menu__list {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.menu__subtitle {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.menu__list {
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -644,5 +667,25 @@ nav {
                 text-align: center;
             }
         }
+    }
+}
+
+// RESPONSIVE DES PAGES RESTAURANTS
+
+.main-container {
+    background-color: white;
+}
+
+.restaurant__pic {
+    width: 100%;
+}
+
+.menu {
+    margin: auto;
+    width: 80%;
+
+    .menu__title {
+        justify-content: center;
+        gap: 30px;
     }
 }
