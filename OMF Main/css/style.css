@@ -42,6 +42,7 @@ p {
 
 header {
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: white;
   width: 100%;
@@ -111,7 +112,7 @@ header .logo {
   align-items: center;
   padding-bottom: 57px;
 }
-.reservation .reservation__input .reservation__input--btn {
+.reservation .reservation__input .reservation__input__btn {
   background: linear-gradient(355deg, #9356DC, #FF79DA);
   color: white;
   border: transparent;
@@ -153,7 +154,7 @@ header .logo {
   padding: 20px 0;
   box-shadow: 8px 8px 8px 3px lightgray;
 }
-.fonctionnement .fonctionnement__container .fonctionnement__list .fonctionnement__list--nmber {
+.fonctionnement .fonctionnement__container .fonctionnement__list .fonctionnement__list__nmber {
   text-align: center;
   align-content: center;
   border: transparent;
@@ -168,7 +169,7 @@ header .logo {
   position: relative;
   left: -15px;
 }
-.fonctionnement .fonctionnement__container .fonctionnement__list .fonctionnement__list--icon {
+.fonctionnement .fonctionnement__container .fonctionnement__list .fonctionnement__list__icon {
   font-size: 1.5em;
   padding-right: 20px;
   color: #7E7E7E;
@@ -202,7 +203,7 @@ header .logo {
   width: 90%;
   background-color: white;
 }
-.restaurant .restaurant__container .card .card__nouveau--palette {
+.restaurant .restaurant__container .card .card__nouveau__palette {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +221,7 @@ header .logo {
   aspect-ratio: 3/1;
   font-size: clamp(14px, 3vw, 24px);
 }
-.restaurant .restaurant__container .card .card__nouveau--note {
+.restaurant .restaurant__container .card .card__nouveau__note {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,7 +258,7 @@ header .logo {
 .restaurant .restaurant__container .card .card__content .heart-checkbox {
   display: none;
 }
-.restaurant .restaurant__container .card .card__content .card__content--heart {
+.restaurant .restaurant__container .card .card__content .card__content__heart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,7 +310,7 @@ header .logo {
 .footer .footer__ul li {
   padding: 5px;
 }
-.footer .footer__ul .footer__ul--link {
+.footer .footer__ul .footer__ul__link {
   font-weight: 500;
 }
 
@@ -354,8 +355,7 @@ nav {
   align-items: center;
   position: absolute;
   left: 30px;
-  top: 20px;
-  font-size: 2.5em;
+  font-size: clamp(12px, 7vw, 30px);
 }
 
 .restaurant__pic img {
@@ -411,7 +411,7 @@ nav {
 .menu .menu__list .dish {
   display: none;
 }
-.menu .menu__list .menu__list--items {
+.menu .menu__list .menu__list__items {
   display: flex;
   justify-content: space-between;
   border: transparent;
@@ -420,20 +420,26 @@ nav {
   cursor: pointer;
   overflow: hidden;
 }
-.menu .menu__list .menu__list--items .menu__list--txt {
+.menu .menu__list .menu__list__items .menu__list__txt {
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   flex-grow: 1;
   overflow: hidden;
+  font-size: 1.5em;
+  font-weight: 500;
 }
-.menu .menu__list .menu__list--items .menu__list--txt p {
-  font-size: 1.3em;
+.menu .menu__list .menu__list__items .menu__list__txt .menu__list__txt--small {
+  font-size: 1em;
+  font-weight: 300;
 }
-.menu .menu__list .menu__list--items .menu__list--price {
+.menu .menu__list .menu__list__items .menu__list__price {
   display: flex;
   align-items: end;
   gap: 15px;
 }
-.menu .menu__list .menu__list--items .menu__list--price h3 {
+.menu .menu__list .menu__list__items .menu__list__price .menu__list__price__txt {
+  font-size: 1.5em;
   padding: 10px;
 }
 .menu .book__input {
@@ -441,12 +447,13 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.menu .book__input .book__input--btn {
+.menu .book__input .book__input__btn {
   background: linear-gradient(355deg, #9356DC, #FF79DA);
   color: white;
   border: transparent;
   border-radius: 40px;
-  width: 25%;
+  width: 50%;
+  max-width: 200px;
   height: 75px;
   margin: 30px 0;
   font-size: 1.5em;
@@ -454,7 +461,7 @@ nav {
   transition: opacity 500ms ease-in-out;
 }
 
-.book__input--btn:hover {
+.book__input__btn:hover {
   cursor: pointer;
   opacity: 75%;
 }
@@ -473,16 +480,10 @@ nav {
   transition: all 250ms ease-in-out;
 }
 
-.dish:checked + .menu__list--items .check {
+.dish:checked + .menu__list__items .check {
   width: 70px;
 }
-.dish:checked + .menu__list--items h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.dish:checked + .menu__list--items p {
-  font-size: 1.3em;
+.dish:checked + .menu__list__items .menu__list__txt {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -578,7 +579,7 @@ nav {
   .footer .footer__ul li {
     font-weight: 400;
   }
-  .footer .footer__ul .footer__ul--link {
+  .footer .footer__ul .footer__ul__link {
     font-weight: 500;
     text-align: center;
   }
@@ -597,7 +598,13 @@ nav {
     justify-content: center;
     gap: 30px;
   }
-  .dish:hover + .menu__list--items .check {
+  .menu .menu__subtitle hr {
+    width: 5%;
+  }
+  .menu .book__input__btn {
+    width: 25%;
+  }
+  .dish:hover + .menu__list__items .check {
     width: 70px;
   }
 }/*# sourceMappingURL=style.css.map */
