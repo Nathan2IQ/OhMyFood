@@ -22,7 +22,7 @@
 }
 
 .mainWrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -56,17 +56,17 @@
 }
 
 .sectionTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 40px;
   height: 3px;
-  background: #99E2D0;
+  background: #99e2d0;
 }
 
 .orderButton {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   color: white;
   border: none;
   padding: 1rem 3rem;
@@ -81,6 +81,20 @@
 .orderButton:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.restaurantHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.restaurantTitle {
+  font-family: var(--font-shrikhand);
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0;
 }
 
 /* Header Component */
@@ -181,16 +195,36 @@
   animation: appearFromBottom 0.8s ease forwards;
 }
 
-.menuItem[data-index="0"] { animation-delay: 0s; }
-.menuItem[data-index="1"] { animation-delay: 0.1s; }
-.menuItem[data-index="2"] { animation-delay: 0.2s; }
-.menuItem[data-index="3"] { animation-delay: 0.3s; }
-.menuItem[data-index="4"] { animation-delay: 0.4s; }
-.menuItem[data-index="5"] { animation-delay: 0.5s; }
-.menuItem[data-index="6"] { animation-delay: 0.6s; }
-.menuItem[data-index="7"] { animation-delay: 0.7s; }
-.menuItem[data-index="8"] { animation-delay: 0.8s; }
-.menuItem[data-index="9"] { animation-delay: 0.9s; }
+.menuItem[data-index="0"] {
+  animation-delay: 0s;
+}
+.menuItem[data-index="1"] {
+  animation-delay: 0.1s;
+}
+.menuItem[data-index="2"] {
+  animation-delay: 0.2s;
+}
+.menuItem[data-index="3"] {
+  animation-delay: 0.3s;
+}
+.menuItem[data-index="4"] {
+  animation-delay: 0.4s;
+}
+.menuItem[data-index="5"] {
+  animation-delay: 0.5s;
+}
+.menuItem[data-index="6"] {
+  animation-delay: 0.6s;
+}
+.menuItem[data-index="7"] {
+  animation-delay: 0.7s;
+}
+.menuItem[data-index="8"] {
+  animation-delay: 0.8s;
+}
+.menuItem[data-index="9"] {
+  animation-delay: 0.9s;
+}
 
 .menuItemContent {
   flex: 1;
@@ -233,7 +267,7 @@
   top: 0;
   bottom: 0;
   width: 59px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +319,7 @@
 .number {
   position: absolute;
   left: -12px;
-  background: #9356DC;
+  background: #9356dc;
   color: white;
   width: 24px;
   height: 24px;
@@ -323,4 +357,4 @@
     flex: 1;
     margin: 0 1rem;
   }
-} 
+}
